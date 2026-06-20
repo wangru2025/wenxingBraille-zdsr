@@ -1,5 +1,5 @@
 #define MyAppName "文星点显器争渡插件"
-#define MyAppVersion "1.0.1"
+#define MyAppVersion "1.0.2"
 #define MyAppPublisher "wangru"
 #define MyAppExeName "wenxingBraille.dll"
 
@@ -8,6 +8,7 @@ AppId={{70BB1E1D-962C-4D2C-98B3-2CCBF18D5BA9}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 AppPublisher={#MyAppPublisher}
+LicenseFile=NOTICE.zh_CN.txt
 DefaultDirName={autopf32}\zdsr\zdsr\addins\BrailleDisplay\wenxingBraille
 DisableDirPage=yes
 DisableProgramGroupPage=yes
