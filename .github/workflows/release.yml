@@ -1,0 +1,46 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag to release, for example v1.0.0"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  build-release:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.tag || github.ref }}
+
+      - name: Install Inno Setup
+        shell: pwsh
+        run: choco install innosetup --no-progress -y
+
+      - name: Build ZDSR API compile stub
+        shell: pwsh
+        run: ./build-zdsr-api-stub.ps1
+
+      - name: Build installer
+        shell: pwsh
+        run: ./build-installer.ps1
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.inputs.tag || github.ref_name }}
+          name: Wenxing Braille ZDSR Add-in 1.0.0
+          files: |
+            dist/wenxingBraille-zdsr-1.0.0-Setup.exe
+          draft: false
+          prerelease: false

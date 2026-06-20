@@ -1,0 +1,17 @@
+bin/
+obj/
+dist/
+build/
+Output/
+*.user
+*.suo
+*.cache
+*.log
+*.pdb
+*.dll
+*.exe
+*.zip
+*.7z
+*.msi
+*.iss.tmp
+__pycache__/
