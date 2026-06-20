@@ -1,5 +1,5 @@
-#define MyAppName "Wenxing Braille ZDSR Add-in"
-#define MyAppVersion "1.0.0"
+#define MyAppName "文星点显器争渡插件"
+#define MyAppVersion "1.0.1"
 #define MyAppPublisher "wangru"
 #define MyAppExeName "wenxingBraille.dll"
 
@@ -21,7 +21,7 @@ PrivilegesRequired=admin
 UninstallDisplayName={#MyAppName}
 
 [Languages]
-Name: "english"; MessagesFile: "compiler:Default.isl"
+Name: "chinesesimp"; MessagesFile: "Languages\ChineseSimplified.isl"
 
 [Files]
 Source: "..\dist\app\wenxingBraille.dll"; DestDir: "{app}"; Flags: ignoreversion

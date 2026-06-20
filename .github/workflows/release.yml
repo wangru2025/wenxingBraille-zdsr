@@ -39,8 +39,8 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.event.inputs.tag || github.ref_name }}
-          name: Wenxing Braille ZDSR Add-in 1.0.0
+          name: Wenxing Braille ZDSR Add-in ${{ github.event.inputs.tag || github.ref_name }}
           files: |
-            dist/wenxingBraille-zdsr-1.0.0-Setup.exe
+            dist/wenxingBraille-zdsr-*.exe
           draft: false
           prerelease: false

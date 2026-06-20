@@ -27,7 +27,7 @@ To build the installer:
 .\build-installer.ps1
 ```
 
-The setup package is written to `dist\wenxingBraille-zdsr-1.0.0-Setup.exe`.
+The setup package is written to `dist\wenxingBraille-zdsr-1.0.1-Setup.exe`.
 
 ## Installation
 

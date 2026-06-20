@@ -27,7 +27,7 @@
 .\build-installer.ps1
 ```
 
-安装包会生成到 `dist\wenxingBraille-zdsr-1.0.0-Setup.exe`。
+安装包会生成到 `dist\wenxingBraille-zdsr-1.0.1-Setup.exe`。
 
 ## 安装
 
